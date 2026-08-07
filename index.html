@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Сергей Егоров — юрист по семейным, жилищным и трудовым спорам</title>
+<meta name="description" content="Юридическая помощь: семейное, жилищное и трудовое право. Консультации, документы, представительство в суде.">
+<style>
+  :root{
+    --bg:#14151a;
+    --bg-card:#1d1f26;
+    --border:#2b2e37;
+    --text:#eceef2;
+    --text-dim:#9aa0ac;
+    --accent:#c9a24b;
+    --accent-dim:#8a763a;
+    --radius:14px;
+    --maxw:760px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Georgia","Times New Roman",serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+
+  /* HERO */
+  header.hero{
+    padding:64px 20px 40px;
+    text-align:center;
+    border-bottom:1px solid var(--border);
+  }
+  .avatar{
+    width:112px;height:112px;border-radius:50%;
+    background:linear-gradient(135deg,#2b2e37,#1a1c22);
+    border:2px solid var(--accent-dim);
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 20px;
+    color:var(--text-dim);
+    font-family:sans-serif;font-size:12px;text-align:center;padding:8px;
+  }
+  h1{font-size:30px;font-weight:normal;letter-spacing:.5px;}
+  .role{color:var(--accent);font-family:sans-serif;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-top:8px;}
+  .tagline{margin-top:18px;color:var(--text-dim);font-size:17px;max-width:520px;margin-left:auto;margin-right:auto;}
+  .hero-meta{margin-top:20px;font-family:sans-serif;font-size:13px;color:var(--text-dim);}
+  .hero-meta span{margin:0 8px;}
+
+  .cta-row{display:flex;gap:12px;justify-content:center;margin-top:28px;flex-wrap:wrap;}
+  .btn{
+    font-family:sans-serif;font-size:14px;font-weight:600;letter-spacing:.3px;
+    padding:13px 26px;border-radius:999px;text-decoration:none;
+    display:inline-block;transition:opacity .15s;
+  }
+  .btn:hover{opacity:.85;}
+  .btn-primary{background:var(--accent);color:#1a1a1a;}
+  .btn-secondary{background:transparent;border:1px solid var(--border);color:var(--text);}
+
+  /* SECTIONS */
+  section{padding:48px 20px;border-bottom:1px solid var(--border);}
+  section h2{
+    font-family:sans-serif;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;
+    color:var(--accent);text-align:center;margin-bottom:28px;
+  }
+  section p, section li{color:var(--text-dim);font-size:16px;}
+
+  /* SPECIALIZATIONS */
+  .spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .spec-card{
+    background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:22px 18px;text-align:center;
+  }
+  .spec-card .icon{font-size:24px;margin-bottom:10px;}
+  .spec-card h3{font-size:16px;font-weight:normal;margin-bottom:8px;}
+  .spec-card p{font-size:13.5px;line-height:1.5;}
+
+  /* PROCESS */
+  .steps{counter-reset:step;list-style:none;}
+  .steps li{
+    position:relative;padding-left:44px;margin-bottom:20px;
+  }
+  .steps li::before{
+    counter-increment:step;content:counter(step);
+    position:absolute;left:0;top:0;
+    width:28px;height:28px;border-radius:50%;
+    border:1px solid var(--accent-dim);color:var(--accent);
+    display:flex;align-items:center;justify-content:center;
+    font-family:sans-serif;font-size:13px;
+  }
+  .steps strong{color:var(--text);font-weight:normal;}
+
+  /* PRICING */
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .price-card{
+    background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:22px;
+  }
+  .price-card .amount{font-family:sans-serif;color:var(--accent);font-size:20px;margin:8px 0;}
+  .price-card p{font-size:13.5px;}
+  .price-note{margin-top:16px;font-size:13px;font-family:sans-serif;color:var(--text-dim);text-align:center;}
+
+  /* REVIEWS */
+  .review{
+    background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:20px;margin-bottom:14px;
+  }
+  .review p{font-style:italic;}
+  .review .who{margin-top:10px;font-family:sans-serif;font-size:12px;color:var(--accent);font-style:normal;}
+
+  /* FAQ */
+  details{
+    background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:16px 20px;margin-bottom:10px;
+  }
+  summary{cursor:pointer;font-size:16px;color:var(--text);list-style:none;position:relative;padding-right:24px;}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";position:absolute;right:0;top:0;color:var(--accent);}
+  details[open] summary::after{content:"–";}
+  details p{margin-top:12px;}
+
+  /* CONTACTS */
+  .contact-section{text-align:center;}
+  .contact-list{margin-top:24px;font-family:sans-serif;font-size:14px;color:var(--text-dim);}
+  .contact-list div{margin-bottom:8px;}
+  .social-row{display:flex;gap:14px;justify-content:center;margin-top:24px;}
+  .social-row a{
+    width:44px;height:44px;border-radius:50%;border:1px solid var(--border);
+    display:flex;align-items:center;justify-content:center;color:var(--text-dim);
+    text-decoration:none;font-family:sans-serif;font-size:13px;
+  }
+  .consent{margin-top:28px;font-family:sans-serif;font-size:11.5px;color:var(--text-dim);opacity:.8;max-width:480px;margin-left:auto;margin-right:auto;}
+
+  footer{text-align:center;padding:28px 20px;font-family:sans-serif;font-size:11px;color:var(--text-dim);opacity:.6;}
+
+  .placeholder{color:#e0a; font-style:normal;}
+
+  @media (max-width:600px){
+    .spec-grid{grid-template-columns:1fr;}
+    .price-grid{grid-template-columns:1fr;}
+    h1{font-size:26px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="avatar">ВАШЕ<br>ФОТО</div>
+    <h1>Сергей Егоров</h1>
+    <div class="role">Юрист · семейное · жилищное · трудовое право</div>
+    <p class="tagline">Разбираю реальные ситуации людей с точки зрения права и помогаю найти рабочее решение — без лишних терминов и лишней тревоги.</p>
+    <div class="hero-meta">
+      <span>📍 <span class="placeholder">[город]</span></span>
+      <span>·</span>
+      <span>Стаж: <span class="placeholder">[N лет / с 2026]</span></span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://wa.me/79000000000" target="_blank" rel="noopener">Написать в WhatsApp</a>
+      <a class="btn btn-secondary" href="tel:+79000000000">Позвонить</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Специализация</h2>
+    <div class="spec-grid">
+      <div class="spec-card">
+        <div class="icon">👪</div>
+        <h3>Семейное право</h3>
+        <p>Развод, раздел имущества, алименты, определение места жительства детей.</p>
+      </div>
+      <div class="spec-card">
+        <div class="icon">🏠</div>
+        <h3>Жилищное право</h3>
+        <p>Споры с соседями и УК, выселение, право пользования, приватизация.</p>
+      </div>
+      <div class="spec-card">
+        <div class="icon">💼</div>
+        <h3>Трудовое право</h3>
+        <p>Незаконное увольнение, невыплата зарплаты, споры с работодателем.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Что делаю</h2>
+    <ul style="list-style:none;">
+      <li style="margin-bottom:10px;">— Консультирую по вашей ситуации и объясняю реальные варианты</li>
+      <li style="margin-bottom:10px;">— Составляю документы: иски, претензии, жалобы, договоры</li>
+      <li style="margin-bottom:10px;">— Представляю интересы в судах и госорганах</li>
+      <li style="margin-bottom:10px;">— Сопровождаю сделки</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Как я работаю</h2>
+    <ol class="steps">
+      <li><strong>Разбираем ситуацию.</strong> Вы описываете проблему, я задаю уточняющие вопросы и оцениваю перспективы.</li>
+      <li><strong>Предлагаю план.</strong> Понятно объясняю, что делать, сроки и стоимость — без сюрпризов.</li>
+      <li><strong>Действуем.</strong> Готовлю документы, представляю интересы, держу вас в курсе на каждом шаге.</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Цены</h2>
+    <div class="price-grid">
+      <div class="price-card">
+        <p>Консультация</p>
+        <div class="amount placeholder">[от N ₽]</div>
+        <p>Разбор ситуации, оценка перспектив, план действий</p>
+      </div>
+      <div class="price-card">
+        <p>Составление документа</p>
+        <div class="amount placeholder">[от N ₽]</div>
+        <p>Иск, претензия, жалоба, договор</p>
+      </div>
+    </div>
+    <p class="price-note">Итоговая стоимость зависит от сложности дела — точная цена называется после консультации.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Отзывы</h2>
+    <div class="review">
+      <p class="placeholder">«[Место для отзыва клиента — короткая цитата о результате и впечатлении от работы]»</p>
+      <div class="who">— [Имя, инициалы или "клиент по жилищному спору"]</div>
+    </div>
+    <div class="review">
+      <p class="placeholder">«[Второй отзыв]»</p>
+      <div class="who">— [Имя]</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>FAQ</h2>
+    <details>
+      <summary>Сколько стоит консультация?</summary>
+      <p>Обсуждается индивидуально в зависимости от ситуации. Цель — не заработать по максимуму, а разобраться и помочь.</p>
+    </details>
+    <details>
+      <summary>Это конфиденциально?</summary>
+      <p>Вся информация, полученная в процессе работы, считается конфиденциальной. Разглашение — только с вашего согласия.</p>
+    </details>
+    <details>
+      <summary>Как быстро вы отвечаете?</summary>
+      <p class="placeholder">[Например: обычно отвечаю в течение 1–2 часов в рабочее время]</p>
+    </details>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="wrap">
+    <h2>Контакты</h2>
+    <p>Опишите вашу ситуацию — отвечу и подскажу, что делать дальше.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://wa.me/79000000000" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-secondary" href="https://t.me/username" target="_blank" rel="noopener">Telegram</a>
+      <a class="btn btn-secondary" href="tel:+79000000000">Позвонить</a>
+    </div>
+    <div class="contact-list">
+      <div class="placeholder">[email@example.com]</div>
+      <div class="placeholder">[город, при необходимости — адрес офиса]</div>
+    </div>
+    <div class="social-row">
+      <a href="https://t.me/username" target="_blank" rel="noopener" title="Telegram">TG</a>
+      <a href="https://instagram.com/username" target="_blank" rel="noopener" title="Instagram">IG</a>
+    </div>
+    <p class="consent">Отправляя сообщение, вы соглашаетесь на обработку персональных данных в целях обратной связи. Данные не передаются третьим лицам без вашего согласия. <span class="placeholder">[замените на актуальную формулировку / ссылку на политику обработки перс. данных]</span></p>
+  </div>
+</section>
+
+<footer>© <span id="year"></span> Сергей Егоров. Юридическая помощь.</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
