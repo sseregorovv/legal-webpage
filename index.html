@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>Сергей Егоров — юрист по семейным, жилищным и трудовым спорам</title>
-<meta name="description" content="Юридическая помощь: семейное, жилищное и трудовое право. Консультации, документы, представительство в суде.">
+<title>РЎРµСЂРіРµР№ Р•РіРѕСЂРѕРІ вЂ” СЋСЂРёСЃС‚ РїРѕ СЃРµРјРµР№РЅС‹Рј, Р¶РёР»РёС‰РЅС‹Рј Рё С‚СЂСѓРґРѕРІС‹Рј СЃРїРѕСЂР°Рј</title>
+<meta name="description" content="Р®СЂРёРґРёС‡РµСЃРєР°СЏ РїРѕРјРѕС‰СЊ: СЃРµРјРµР№РЅРѕРµ, Р¶РёР»РёС‰РЅРѕРµ Рё С‚СЂСѓРґРѕРІРѕРµ РїСЂР°РІРѕ. РљРѕРЅСЃСѓР»СЊС‚Р°С†РёРё, РґРѕРєСѓРјРµРЅС‚С‹, РїСЂРµРґСЃС‚Р°РІРёС‚РµР»СЊСЃС‚РІРѕ РІ СЃСѓРґРµ.">
 <style>
   :root{
     --bg:#14151a;
@@ -43,7 +43,8 @@
     font-family:sans-serif;font-size:12px;text-align:center;padding:8px;
   }
   h1{font-size:30px;font-weight:normal;letter-spacing:.5px;}
-  .role{color:var(--accent);font-family:sans-serif;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-top:8px;}
+  .role-title{margin-top:6px;font-size:18px;color:var(--text-dim);}
+  .role{color:var(--accent);font-family:sans-serif;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-top:10px;}
   .tagline{margin-top:18px;color:var(--text-dim);font-size:17px;max-width:520px;margin-left:auto;margin-right:auto;}
   .hero-meta{margin-top:20px;font-family:sans-serif;font-size:13px;color:var(--text-dim);}
   .hero-meta span{margin:0 8px;}
@@ -57,6 +58,7 @@
   .btn:hover{opacity:.85;}
   .btn-primary{background:var(--accent);color:#1a1a1a;}
   .btn-secondary{background:transparent;border:1px solid var(--border);color:var(--text);}
+  .btn-disabled{background:transparent;border:1px dashed var(--border);color:var(--text-dim);cursor:default;}
 
   /* SECTIONS */
   section{padding:48px 20px;border-bottom:1px solid var(--border);}
@@ -67,7 +69,7 @@
   section p, section li{color:var(--text-dim);font-size:16px;}
 
   /* SPECIALIZATIONS */
-  .spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .spec-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
   .spec-card{
     background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);
     padding:22px 18px;text-align:center;
@@ -117,7 +119,7 @@
   summary{cursor:pointer;font-size:16px;color:var(--text);list-style:none;position:relative;padding-right:24px;}
   summary::-webkit-details-marker{display:none;}
   summary::after{content:"+";position:absolute;right:0;top:0;color:var(--accent);}
-  details[open] summary::after{content:"–";}
+  details[open] summary::after{content:"вЂ“";}
   details p{margin-top:12px;}
 
   /* CONTACTS */
@@ -147,40 +149,47 @@
 
 <header class="hero">
   <div class="wrap">
-    <div class="avatar">ВАШЕ<br>ФОТО</div>
-    <h1>Сергей Егоров</h1>
-    <div class="role">Юрист · семейное · жилищное · трудовое право</div>
-    <p class="tagline">Разбираю реальные ситуации людей с точки зрения права и помогаю найти рабочее решение — без лишних терминов и лишней тревоги.</p>
+    <div class="avatar">Р’РђРЁР•<br>Р¤РћРўРћ</div>
+    <h1>РЎРµСЂРіРµР№ Р•РіРѕСЂРѕРІ</h1>
+    <p class="role-title">Р®СЂРёСЃС‚</p>
+    <div class="role">РЎРµРјРµР№РЅРѕРµ В· Р¶РёР»РёС‰РЅРѕРµ В· С‚СЂСѓРґРѕРІРѕРµ В· РїСЂРµРґРїСЂРёРЅРёРјР°С‚РµР»СЊСЃРєРѕРµ РїСЂР°РІРѕ</div>
+    <p class="tagline">Р Р°Р·Р±РёСЂР°СЋ СЂРµР°Р»СЊРЅС‹Рµ СЃРёС‚СѓР°С†РёРё Р»СЋРґРµР№ СЃ С‚РѕС‡РєРё Р·СЂРµРЅРёСЏ РїСЂР°РІР° Рё РїРѕРјРѕРіР°СЋ РЅР°Р№С‚Рё СЂР°Р±РѕС‡РµРµ СЂРµС€РµРЅРёРµ вЂ” Р±РµР· Р»РёС€РЅРёС… С‚РµСЂРјРёРЅРѕРІ Рё Р»РёС€РЅРµР№ С‚СЂРµРІРѕРіРё.</p>
     <div class="hero-meta">
-      <span>📍 <span class="placeholder">[город]</span></span>
-      <span>·</span>
-      <span>Стаж: <span class="placeholder">[N лет / с 2026]</span></span>
+      <span>рџ“Ќ РњРѕСЃРєРІР°</span>
+      <span>В·</span>
+      <span>РЎС‚Р°Р¶: 4 РіРѕРґР° (СЃ 2022 РіРѕРґР°)</span>
     </div>
     <div class="cta-row">
-      <a class="btn btn-primary" href="https://wa.me/79000000000" target="_blank" rel="noopener">Написать в WhatsApp</a>
-      <a class="btn btn-secondary" href="tel:+79000000000">Позвонить</a>
+      <a class="btn btn-primary" href="https://t.me/sseregorovvv" target="_blank" rel="noopener">РќР°РїРёСЃР°С‚СЊ РІ Telegram</a>
+      <span class="btn btn-disabled">РќР°РїРёСЃР°С‚СЊ РІ РњРђРҐ</span>
+      <a class="btn btn-secondary" href="tel:+79000000000">РџРѕР·РІРѕРЅРёС‚СЊ</a>
     </div>
   </div>
 </header>
 
 <section>
   <div class="wrap">
-    <h2>Специализация</h2>
+    <h2>РЎРїРµС†РёР°Р»РёР·Р°С†РёСЏ</h2>
     <div class="spec-grid">
       <div class="spec-card">
-        <div class="icon">👪</div>
-        <h3>Семейное право</h3>
-        <p>Развод, раздел имущества, алименты, определение места жительства детей.</p>
+        <div class="icon">рџ‘Є</div>
+        <h3>РЎРµРјРµР№РЅРѕРµ РїСЂР°РІРѕ</h3>
+        <p>Р Р°Р·РІРѕРґ, СЂР°Р·РґРµР» РёРјСѓС‰РµСЃС‚РІР°, Р°Р»РёРјРµРЅС‚С‹, РѕРїСЂРµРґРµР»РµРЅРёРµ РјРµСЃС‚Р° Р¶РёС‚РµР»СЊСЃС‚РІР° РґРµС‚РµР№.</p>
       </div>
       <div class="spec-card">
-        <div class="icon">🏠</div>
-        <h3>Жилищное право</h3>
-        <p>Споры с соседями и УК, выселение, право пользования, приватизация.</p>
+        <div class="icon">рџЏ </div>
+        <h3>Р–РёР»РёС‰РЅРѕРµ РїСЂР°РІРѕ</h3>
+        <p>РЎРїРѕСЂС‹ СЃ СЃРѕСЃРµРґСЏРјРё Рё РЈРљ, РІС‹СЃРµР»РµРЅРёРµ, РїСЂР°РІРѕ РїРѕР»СЊР·РѕРІР°РЅРёСЏ, РїСЂРёРІР°С‚РёР·Р°С†РёСЏ.</p>
       </div>
       <div class="spec-card">
-        <div class="icon">💼</div>
-        <h3>Трудовое право</h3>
-        <p>Незаконное увольнение, невыплата зарплаты, споры с работодателем.</p>
+        <div class="icon">рџ’ј</div>
+        <h3>РўСЂСѓРґРѕРІРѕРµ РїСЂР°РІРѕ</h3>
+        <p>РќРµР·Р°РєРѕРЅРЅРѕРµ СѓРІРѕР»СЊРЅРµРЅРёРµ, РЅРµРІС‹РїР»Р°С‚Р° Р·Р°СЂРїР»Р°С‚С‹, СЃРїРѕСЂС‹ СЃ СЂР°Р±РѕС‚РѕРґР°С‚РµР»РµРј.</p>
+      </div>
+      <div class="spec-card">
+        <div class="icon">рџ“€</div>
+        <h3>РџСЂРµРґРїСЂРёРЅРёРјР°С‚РµР»СЊСЃРєРѕРµ РїСЂР°РІРѕ</h3>
+        <p>Р”РѕРіРѕРІРѕСЂС‹, РІР·С‹СЃРєР°РЅРёРµ Р·Р°РґРѕР»Р¶РµРЅРЅРѕСЃС‚Рё, СЃРїРѕСЂС‹ СЃ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°РјРё, СЃРѕРїСЂРѕРІРѕР¶РґРµРЅРёРµ Р±РёР·РЅРµСЃР°.</p>
       </div>
     </div>
   </div>
@@ -188,56 +197,60 @@
 
 <section>
   <div class="wrap">
-    <h2>Что делаю</h2>
+    <h2>Р§С‚Рѕ РґРµР»Р°СЋ</h2>
     <ul style="list-style:none;">
-      <li style="margin-bottom:10px;">— Консультирую по вашей ситуации и объясняю реальные варианты</li>
-      <li style="margin-bottom:10px;">— Составляю документы: иски, претензии, жалобы, договоры</li>
-      <li style="margin-bottom:10px;">— Представляю интересы в судах и госорганах</li>
-      <li style="margin-bottom:10px;">— Сопровождаю сделки</li>
+      <li style="margin-bottom:10px;">вЂ” РљРѕРЅСЃСѓР»СЊС‚РёСЂСѓСЋ РїРѕ РІР°С€РµР№ СЃРёС‚СѓР°С†РёРё Рё РѕР±СЉСЏСЃРЅСЏСЋ СЂРµР°Р»СЊРЅС‹Рµ РІР°СЂРёР°РЅС‚С‹</li>
+      <li style="margin-bottom:10px;">вЂ” РЎРѕСЃС‚Р°РІР»СЏСЋ РґРѕРєСѓРјРµРЅС‚С‹: РёСЃРєРё, РїСЂРµС‚РµРЅР·РёРё, Р¶Р°Р»РѕР±С‹, РґРѕРіРѕРІРѕСЂС‹</li>
+      <li style="margin-bottom:10px;">вЂ” РџСЂРµРґСЃС‚Р°РІР»СЏСЋ РёРЅС‚РµСЂРµСЃС‹ РІ СЃСѓРґР°С… Рё РіРѕСЃРѕСЂРіР°РЅР°С…</li>
+      <li style="margin-bottom:10px;">вЂ” РЎРѕРїСЂРѕРІРѕР¶РґР°СЋ СЃРґРµР»РєРё</li>
     </ul>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <h2>Как я работаю</h2>
+    <h2>РљР°Рє СЏ СЂР°Р±РѕС‚Р°СЋ</h2>
     <ol class="steps">
-      <li><strong>Разбираем ситуацию.</strong> Вы описываете проблему, я задаю уточняющие вопросы и оцениваю перспективы.</li>
-      <li><strong>Предлагаю план.</strong> Понятно объясняю, что делать, сроки и стоимость — без сюрпризов.</li>
-      <li><strong>Действуем.</strong> Готовлю документы, представляю интересы, держу вас в курсе на каждом шаге.</li>
+      <li><strong>Р Р°Р·Р±РёСЂР°РµРј СЃРёС‚СѓР°С†РёСЋ.</strong> Р’С‹ РѕРїРёСЃС‹РІР°РµС‚Рµ РїСЂРѕР±Р»РµРјСѓ, СЏ Р·Р°РґР°СЋ СѓС‚РѕС‡РЅСЏСЋС‰РёРµ РІРѕРїСЂРѕСЃС‹ Рё РѕС†РµРЅРёРІР°СЋ РїРµСЂСЃРїРµРєС‚РёРІС‹.</li>
+      <li><strong>РџСЂРµРґР»Р°РіР°СЋ РїР»Р°РЅ.</strong> РџРѕРЅСЏС‚РЅРѕ РѕР±СЉСЏСЃРЅСЏСЋ, С‡С‚Рѕ РґРµР»Р°С‚СЊ, СЃСЂРѕРєРё Рё СЃС‚РѕРёРјРѕСЃС‚СЊ вЂ” Р±РµР· СЃСЋСЂРїСЂРёР·РѕРІ.</li>
+      <li><strong>Р”РµР№СЃС‚РІСѓРµРј.</strong> Р“РѕС‚РѕРІР»СЋ РґРѕРєСѓРјРµРЅС‚С‹, РїСЂРµРґСЃС‚Р°РІР»СЏСЋ РёРЅС‚РµСЂРµСЃС‹, РґРµСЂР¶Сѓ РІР°СЃ РІ РєСѓСЂСЃРµ РЅР° РєР°Р¶РґРѕРј С€Р°РіРµ.</li>
     </ol>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <h2>Цены</h2>
+    <h2>Р¦РµРЅС‹</h2>
     <div class="price-grid">
       <div class="price-card">
-        <p>Консультация</p>
-        <div class="amount placeholder">[от N ₽]</div>
-        <p>Разбор ситуации, оценка перспектив, план действий</p>
+        <p>РљРѕРЅСЃСѓР»СЊС‚Р°С†РёСЏ</p>
+        <div class="amount">3 000 в‚Ѕ</div>
+        <p>Р Р°Р·Р±РѕСЂ СЃРёС‚СѓР°С†РёРё, РѕС†РµРЅРєР° РїРµСЂСЃРїРµРєС‚РёРІ, РїР»Р°РЅ РґРµР№СЃС‚РІРёР№</p>
       </div>
       <div class="price-card">
-        <p>Составление документа</p>
-        <div class="amount placeholder">[от N ₽]</div>
-        <p>Иск, претензия, жалоба, договор</p>
+        <p>РЎРѕСЃС‚Р°РІР»РµРЅРёРµ РґРѕРєСѓРјРµРЅС‚Р°</p>
+        <div class="amount">РѕС‚ 3 000 в‚Ѕ</div>
+        <p>РСЃРє, РїСЂРµС‚РµРЅР·РёСЏ, Р¶Р°Р»РѕР±Р°, РґРѕРіРѕРІРѕСЂ</p>
       </div>
     </div>
-    <p class="price-note">Итоговая стоимость зависит от сложности дела — точная цена называется после консультации.</p>
+    <p class="price-note">РС‚РѕРіРѕРІР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ Р·Р°РІРёСЃРёС‚ РѕС‚ СЃР»РѕР¶РЅРѕСЃС‚Рё РґРµР»Р° вЂ” С‚РѕС‡РЅР°СЏ С†РµРЅР° РЅР°Р·С‹РІР°РµС‚СЃСЏ РїРѕСЃР»Рµ РєРѕРЅСЃСѓР»СЊС‚Р°С†РёРё.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <h2>Отзывы</h2>
+    <h2>РћС‚Р·С‹РІС‹</h2>
     <div class="review">
-      <p class="placeholder">«[Место для отзыва клиента — короткая цитата о результате и впечатлении от работы]»</p>
-      <div class="who">— [Имя, инициалы или "клиент по жилищному спору"]</div>
+      <p>В«Р Р°Р±РѕС‚Р°Р» РїРѕ РґРѕРіРѕРІРѕСЂСѓ, РЅРѕ С„Р°РєС‚РёС‡РµСЃРєРё РёСЃРїРѕР»РЅСЏР» РѕР±СЏР·Р°РЅРЅРѕСЃС‚Рё С€С‚Р°С‚РЅРѕРіРѕ СЃРѕС‚СЂСѓРґРЅРёРєР° Р±РµР· РѕС„РѕСЂРјР»РµРЅРёСЏ. РЎРµСЂРіРµР№ РїРѕРјРѕРі СЃРѕР±СЂР°С‚СЊ РґРѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІР° Рё РґРѕР±РёС‚СЊСЃСЏ РїСЂРёР·РЅР°РЅРёСЏ РѕС‚РЅРѕС€РµРЅРёР№ С‚СЂСѓРґРѕРІС‹РјРё С‡РµСЂРµР· СЃСѓРґ вЂ” РІРѕСЃСЃС‚Р°РЅРѕРІРёР»Рё РІСЃРµ РїРѕР»РѕР¶РµРЅРЅС‹Рµ РІС‹РїР»Р°С‚С‹.В»</p>
+      <div class="who">вЂ” Рђ., СЃРїРѕСЂ Рѕ РїСЂРёР·РЅР°РЅРёРё РѕС‚РЅРѕС€РµРЅРёР№ С‚СЂСѓРґРѕРІС‹РјРё</div>
     </div>
     <div class="review">
-      <p class="placeholder">«[Второй отзыв]»</p>
-      <div class="who">— [Имя]</div>
+      <p>В«Р Р°Р·РІРѕРґ Рё СЂР°Р·РґРµР» РёРјСѓС‰РµСЃС‚РІР° вЂ” С‚Рѕ, С‡РµРіРѕ СЏ Р±РѕСЏР»Р°СЃСЊ Р±РѕР»СЊС€Рµ РІСЃРµРіРѕ. РЎРµСЂРіРµР№ С‡С‘С‚РєРѕ РѕР±СЉСЏСЃРЅРёР» РІСЃРµ С€Р°РіРё, РїРѕРјРѕРі РґРѕРіРѕРІРѕСЂРёС‚СЊСЃСЏ Р±РµР· Р»РёС€РЅРёС… РєРѕРЅС„Р»РёРєС‚РѕРІ Рё РґРѕРІС‘Р» РґРµР»Рѕ РґРѕ РєРѕРЅС†Р°.В»</p>
+      <div class="who">вЂ” Рњ., СЃРїРѕСЂ Рѕ СЂР°СЃС‚РѕСЂР¶РµРЅРёРё Р±СЂР°РєР° Рё СЂР°Р·РґРµР»Рµ РёРјСѓС‰РµСЃС‚РІР°</div>
+    </div>
+    <div class="review">
+      <p>В«РљРѕРЅС‚СЂР°РіРµРЅС‚ Р±РѕР»СЊС€Рµ РіРѕРґР° С‚СЏРЅСѓР» СЃ РѕРїР»Р°С‚РѕР№ РїРѕ РґРѕРіРѕРІРѕСЂСѓ. РЎРµСЂРіРµР№ РїРѕРґРіРѕС‚РѕРІРёР» РґРѕРєСѓРјРµРЅС‚С‹ Рё РїСЂРµРґСЃС‚Р°РІР»СЏР» РёРЅС‚РµСЂРµСЃС‹ РІ СЃСѓРґРµ вЂ” РґРѕР»Рі СѓРґР°Р»РѕСЃСЊ РІР·С‹СЃРєР°С‚СЊ РІ РїРѕР»РЅРѕРј РѕР±СЉС‘РјРµ.В»</p>
+      <div class="who">вЂ” Р., РІР·С‹СЃРєР°РЅРёРµ Р·Р°РґРѕР»Р¶РµРЅРЅРѕСЃС‚Рё</div>
     </div>
   </div>
 </section>
@@ -246,42 +259,42 @@
   <div class="wrap">
     <h2>FAQ</h2>
     <details>
-      <summary>Сколько стоит консультация?</summary>
-      <p>Обсуждается индивидуально в зависимости от ситуации. Цель — не заработать по максимуму, а разобраться и помочь.</p>
+      <summary>РЎРєРѕР»СЊРєРѕ СЃС‚РѕРёС‚ РєРѕРЅСЃСѓР»СЊС‚Р°С†РёСЏ?</summary>
+      <p>РћР±СЃСѓР¶РґР°РµС‚СЃСЏ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅРѕ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СЃРёС‚СѓР°С†РёРё. Р¦РµР»СЊ вЂ” РЅРµ Р·Р°СЂР°Р±РѕС‚Р°С‚СЊ РїРѕ РјР°РєСЃРёРјСѓРјСѓ, Р° СЂР°Р·РѕР±СЂР°С‚СЊСЃСЏ Рё РїРѕРјРѕС‡СЊ.</p>
     </details>
     <details>
-      <summary>Это конфиденциально?</summary>
-      <p>Вся информация, полученная в процессе работы, считается конфиденциальной. Разглашение — только с вашего согласия.</p>
+      <summary>Р­С‚Рѕ РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕ?</summary>
+      <p>Р’СЃСЏ РёРЅС„РѕСЂРјР°С†РёСЏ, РїРѕР»СѓС‡РµРЅРЅР°СЏ РІ РїСЂРѕС†РµСЃСЃРµ СЂР°Р±РѕС‚С‹, СЃС‡РёС‚Р°РµС‚СЃСЏ РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕР№. Р Р°Р·РіР»Р°С€РµРЅРёРµ вЂ” С‚РѕР»СЊРєРѕ СЃ РІР°С€РµРіРѕ СЃРѕРіР»Р°СЃРёСЏ.</p>
     </details>
     <details>
-      <summary>Как быстро вы отвечаете?</summary>
-      <p class="placeholder">[Например: обычно отвечаю в течение 1–2 часов в рабочее время]</p>
+      <summary>РљР°Рє Р±С‹СЃС‚СЂРѕ РІС‹ РѕС‚РІРµС‡Р°РµС‚Рµ?</summary>
+      <p class="placeholder">[РќР°РїСЂРёРјРµСЂ: РѕР±С‹С‡РЅРѕ РѕС‚РІРµС‡Р°СЋ РІ С‚РµС‡РµРЅРёРµ 1вЂ“2 С‡Р°СЃРѕРІ РІ СЂР°Р±РѕС‡РµРµ РІСЂРµРјСЏ]</p>
     </details>
   </div>
 </section>
 
 <section class="contact-section">
   <div class="wrap">
-    <h2>Контакты</h2>
-    <p>Опишите вашу ситуацию — отвечу и подскажу, что делать дальше.</p>
+    <h2>РљРѕРЅС‚Р°РєС‚С‹</h2>
+    <p>РћРїРёС€РёС‚Рµ РІР°С€Сѓ СЃРёС‚СѓР°С†РёСЋ вЂ” РѕС‚РІРµС‡Сѓ Рё РїРѕРґСЃРєР°Р¶Сѓ, С‡С‚Рѕ РґРµР»Р°С‚СЊ РґР°Р»СЊС€Рµ.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="https://wa.me/79000000000" target="_blank" rel="noopener">WhatsApp</a>
-      <a class="btn btn-secondary" href="https://t.me/username" target="_blank" rel="noopener">Telegram</a>
-      <a class="btn btn-secondary" href="tel:+79000000000">Позвонить</a>
+      <a class="btn btn-primary" href="https://t.me/sseregorovvv" target="_blank" rel="noopener">РќР°РїРёСЃР°С‚СЊ РІ Telegram</a>
+      <span class="btn btn-disabled">РќР°РїРёСЃР°С‚СЊ РІ РњРђРҐ</span>
+      <a class="btn btn-secondary" href="tel:+79000000000">РџРѕР·РІРѕРЅРёС‚СЊ</a>
     </div>
     <div class="contact-list">
-      <div class="placeholder">[email@example.com]</div>
-      <div class="placeholder">[город, при необходимости — адрес офиса]</div>
+      <div>ser.egorovv@mail.ru</div>
+      <div>РњРѕСЃРєРІР°</div>
     </div>
     <div class="social-row">
-      <a href="https://t.me/username" target="_blank" rel="noopener" title="Telegram">TG</a>
+      <a href="https://t.me/sseregorovvv" target="_blank" rel="noopener" title="Telegram">TG</a>
       <a href="https://instagram.com/username" target="_blank" rel="noopener" title="Instagram">IG</a>
     </div>
-    <p class="consent">Отправляя сообщение, вы соглашаетесь на обработку персональных данных в целях обратной связи. Данные не передаются третьим лицам без вашего согласия. <span class="placeholder">[замените на актуальную формулировку / ссылку на политику обработки перс. данных]</span></p>
+    <p class="consent">РћС‚РїСЂР°РІР»СЏСЏ СЃРѕРѕР±С‰РµРЅРёРµ, РІС‹ СЃРѕРіР»Р°С€Р°РµС‚РµСЃСЊ РЅР° РѕР±СЂР°Р±РѕС‚РєСѓ РїРµСЂСЃРѕРЅР°Р»СЊРЅС‹С… РґР°РЅРЅС‹С… РІ С†РµР»СЏС… РѕР±СЂР°С‚РЅРѕР№ СЃРІСЏР·Рё. Р”Р°РЅРЅС‹Рµ РЅРµ РїРµСЂРµРґР°СЋС‚СЃСЏ С‚СЂРµС‚СЊРёРј Р»РёС†Р°Рј Р±РµР· РІР°С€РµРіРѕ СЃРѕРіР»Р°СЃРёСЏ. <span class="placeholder">[Р·Р°РјРµРЅРёС‚Рµ РЅР° Р°РєС‚СѓР°Р»СЊРЅСѓСЋ С„РѕСЂРјСѓР»РёСЂРѕРІРєСѓ / СЃСЃС‹Р»РєСѓ РЅР° РїРѕР»РёС‚РёРєСѓ РѕР±СЂР°Р±РѕС‚РєРё РїРµСЂСЃ. РґР°РЅРЅС‹С…]</span></p>
   </div>
 </section>
 
-<footer>© <span id="year"></span> Сергей Егоров. Юридическая помощь.</footer>
+<footer>В© <span id="year"></span> РЎРµСЂРіРµР№ Р•РіРѕСЂРѕРІ. Р®СЂРёРґРёС‡РµСЃРєР°СЏ РїРѕРјРѕС‰СЊ.</footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
