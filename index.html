@@ -127,22 +127,56 @@
   .contact-section{text-align:center;}
   .contact-list{margin-top:24px;font-family:sans-serif;font-size:14px;color:var(--text-dim);}
   .contact-list div{margin-bottom:8px;}
-  .social-row{display:flex;gap:14px;justify-content:center;margin-top:24px;}
+  .contact-email{background:var(--bg-card);border:1px solid var(--accent-dim);border-radius:var(--radius);padding:14px 20px;margin-bottom:12px;color:var(--accent);}
+  .contact-email a{color:var(--accent);text-decoration:none;font-weight:600;}
+  .contact-email a:hover{text-decoration:underline;}
+  .social-section{margin-top:32px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px 20px;}
+  .social-title{font-family:sans-serif;font-size:13px;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;text-align:center;}
+  .social-row{display:flex;gap:14px;justify-content:center;}
   .social-row a{
-    width:44px;height:44px;border-radius:50%;border:1px solid var(--border);
+    width:48px;height:48px;border-radius:50%;border:2px solid var(--accent-dim);
     display:flex;align-items:center;justify-content:center;color:var(--text-dim);
-    text-decoration:none;font-family:sans-serif;font-size:13px;
+    text-decoration:none;font-family:sans-serif;font-size:13px;transition:all .2s;
   }
+  .social-row a:hover{border-color:var(--accent);color:var(--accent);}
+  .social-row span{font-size:11px;font-family:sans-serif;}
   .consent{margin-top:28px;font-family:sans-serif;font-size:11.5px;color:var(--text-dim);opacity:.8;max-width:480px;margin-left:auto;margin-right:auto;}
 
   footer{text-align:center;padding:28px 20px;font-family:sans-serif;font-size:11px;color:var(--text-dim);opacity:.6;}
 
   .placeholder{color:#e0a; font-style:normal;}
 
+  /* FORM */
+  .form-section{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px 20px;margin:20px 0;}
+  .form-section h3{font-size:18px;margin-bottom:16px;color:var(--text);}
+  input, textarea{
+    width:100%;padding:12px;margin-bottom:12px;
+    background:var(--bg);border:1px solid var(--border);border-radius:8px;
+    color:var(--text);font-family:sans-serif;font-size:14px;
+  }
+  input:focus, textarea:focus{outline:none;border-color:var(--accent);}
+  textarea{resize:vertical;min-height:80px;}
+  .form-submit{background:var(--accent);color:#1a1a1a;border:none;cursor:pointer;font-weight:600;padding:13px 26px;border-radius:999px;margin-top:8px;}
+  .form-submit:hover{opacity:.9;}
+
+  /* FLOATING BUTTON */
+  .floating-btn{
+    position:fixed;bottom:24px;right:24px;
+    width:60px;height:60px;border-radius:50%;
+    background:linear-gradient(135deg,#34c759,#30b050);
+    display:flex;align-items:center;justify-content:center;
+    text-decoration:none;color:white;font-weight:600;
+    box-shadow:0 4px 12px rgba(52,199,89,.4);
+    z-index:999;transition:all .3s;
+  }
+  .floating-btn:hover{transform:scale(1.1);box-shadow:0 6px 16px rgba(52,199,89,.6);}
+  .floating-btn span{font-size:24px;}
+
   @media (max-width:600px){
     .spec-grid{grid-template-columns:1fr;}
     .price-grid{grid-template-columns:1fr;}
     h1{font-size:26px;}
+    .floating-btn{bottom:16px;right:16px;width:54px;height:54px;}
   }
 </style>
 </head>
@@ -154,7 +188,7 @@
     <h1>Сергей Егоров</h1>
     <p class="role-title">Юрист</p>
     <div class="role">Семейное · жилищное · трудовое · предпринимательское право</div>
-    <p class="tagline">Разбираю реальные ситуации людей с точки зрения права и помогаю найти рабочее решение — без лишних терминов и тревоги.</p>
+    <p class="tagline">Разбираю реальные ситуации людей с точки зрения права и помогаю найти рабочее решение — без лишних терминов и лишней тревоги.</p>
     <div class="hero-meta">
       <span>📍 Москва</span>
       <span>·</span>
@@ -225,13 +259,13 @@
     <div class="price-grid">
       <div class="price-card">
         <p>Консультация</p>
-        <div class="amount">3 000 ₽</div>
+        <div class="amount">Бесплатно</div>
         <p>Разбор ситуации, оценка перспектив, план действий</p>
       </div>
       <div class="price-card">
         <p>Составление документа</p>
         <div class="amount">от 3 000 ₽</div>
-        <p>Иск, претензия, жалоба, договор</p>
+        <p>Иск, претензия, жалоба, договор, ходатайства и т.д.</p>
       </div>
     </div>
     <p class="price-note">Итоговая стоимость зависит от сложности дела — точная цена называется после консультации.</p>
@@ -261,15 +295,31 @@
     <h2>FAQ</h2>
     <details>
       <summary>Сколько стоит консультация?</summary>
-      <p>Обсуждается индивидуально в зависимости от ситуации. Цель — не заработать по максимуму, а разобраться и помочь.</p>
+      <p>Первичная консультация бесплатна. Мы с Вами обсуждаем ситуацию и я предлагаю возможные пути решения</p>
     </details>
     <details>
       <summary>Это конфиденциально?</summary>
-      <p>Вся информация, полученная в процессе работы, считается конфиденциальной. Разглашение — только с вашего согласия.</p>
+      <p>Да, безусловно. Вся информация полученная в процессе работы, считается конфиденциальной. Разглашение возможно только с Вашего согласия.</p>
     </details>
     <details>
       <summary>Как быстро вы отвечаете?</summary>
-      <p class="placeholder">[Например: обычно отвечаю в течение 1–2 часов в рабочее время]</p>
+      <p>В мессенджерах и по электронной почте отвечаю в течении 1-2 часов, если хотите связаться оперативно, то лучше звоните по телефону.</p>
+    </details>
+    <details>
+      <summary>Как подать на развод и что это стоит?</summary>
+      <p>Развод через суд занимает 1-6 месяцев в зависимости от согласия супруга. Я помогу подготовить документы, представлю интересы в суде. Стоимость обсуждается индивидуально.</p>
+    </details>
+    <details>
+      <summary>Не платят зарплату — что делать?</summary>
+      <p>Можно попробовать досудебное урегулирование (претензия работодателю) или сразу идти в суд/трудовую инспекцию. Я помогу оценить шансы и подготовлю необходимые документы.</p>
+    </details>
+    <details>
+      <summary>Как взыскать задолженность с должника?</summary>
+      <p>Сначала нужна претензия, потом исковое заявление в суд. После решения суда — исполнительное производство. Я помогу на каждом этапе.</p>
+    </details>
+    <details>
+      <summary>Могу ли я выселить соседа/нанимателя?</summary>
+      <p>Это зависит от того, кто собственник и на каких условиях сосед/наниматель там живёт. Нужно разбираться в конкретной ситуации. Поможу оценить основания и подготовлю иск.</p>
     </details>
   </div>
 </section>
@@ -277,25 +327,47 @@
 <section class="contact-section">
   <div class="wrap">
     <h2>Контакты</h2>
-    <p>Опишите вашу ситуацию — отвечу и подскажу, что делать дальше.</p>
+    <p>Опишите вашу ситуацию, а я выслушаю и подскажу, что делать дальше.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://t.me/sseregorovvv" target="_blank" rel="noopener">Написать в Telegram</a>
       <span class="btn btn-disabled">Написать в МАХ</span>
       <a class="btn btn-secondary" href="tel:+79037007890">Позвонить</a>
     </div>
-    <div class="contact-list">
-      <div>ser.egorovv@mail.ru</div>
-      <div>Москва</div>
+    <div class="contact-email">
+      <strong>Почта:</strong> <a href="mailto:ser.egorovv@mail.ru">ser.egorovv@mail.ru</a>
     </div>
-    <div class="social-row">
-      <a href="https://t.me/sseregorovvv" target="_blank" rel="noopener" title="Telegram">TG</a>
-      <a href="https://instagram.com/username" target="_blank" rel="noopener" title="Instagram">IG</a>
+    <div class="contact-list">
+      <div>📍 Москва</div>
+    </div>
+    <div class="form-section">
+      <h3>Оставить заявку</h3>
+      <form action="https://formspree.io/f/mdendpwb" method="POST">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="email" name="email" placeholder="Ваша почта" required>
+        <input type="tel" name="phone" placeholder="Ваш телефон" required>
+        <textarea name="message" placeholder="Опишите вашу ситуацию кратко" required></textarea>
+        <button type="submit" class="form-submit">Отправить заявку</button>
+      </form>
+      <p style="font-size:12px;color:var(--text-dim);margin-top:12px;">Ваши данные обработаны безопасно и не будут переданы третьим лицам.</p>
+    </div>
+    <div class="social-section">
+      <div class="social-title">Мои каналы</div>
+      <div class="social-row">
+        <a href="https://t.me/sseregorovvv" target="_blank" rel="noopener" title="Telegram чат">Чат</a>
+        <a href="https://t.me/esslawyer" target="_blank" rel="noopener" title="Telegram канал">Канал</a>
+        <a href="https://www.instagram.com/ser.egorovv/" target="_blank" rel="noopener" title="Instagram">IG</a>
+        <a href="https://www.youtube.com/@ser.egorovv" target="_blank" rel="noopener" title="YouTube">YT</a>
+      </div>
     </div>
     <p class="consent">Отправляя сообщение, вы соглашаетесь на обработку персональных данных в целях обратной связи. Данные не передаются третьим лицам без вашего согласия. <span class="placeholder">[замените на актуальную формулировку / ссылку на политику обработки перс. данных]</span></p>
   </div>
 </section>
 
 <footer>© <span id="year"></span> Сергей Егоров. Юридическая помощь.</footer>
+
+<a href="https://t.me/sseregorovvv" target="_blank" rel="noopener" class="floating-btn" title="Написать в Telegram">
+  <span>✉️</span>
+</a>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
