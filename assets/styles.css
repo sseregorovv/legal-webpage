@@ -1855,3 +1855,20 @@ html {
 }
 
 }
+
+/* Question form and practical materials. */
+.contact-form-note { margin-top: 17px; max-width: 480px; color: #6c6068; font-size: 14px; line-height: 1.65; }
+.contact-form-note a { text-underline-offset: 3px; }
+.court-project { margin-top: 48px; }
+.project-file-links { display: flex; gap: 13px 22px; flex-wrap: wrap; align-items: center; margin-top: 22px; }
+.project-file-links a { font-size: 15px; text-underline-offset: 4px; }
+.project-file-links span { font-size: 13px; color: #70666b; }
+.court-project-visual { background: #e4e9e8; }
+.court-project-visual:before { display: none; }
+.court-project-preview { width: 100%; padding: 30px; border: 1px solid #c6cfcd; border-radius: 14px; background: #fff; box-shadow: 0 24px 40px #334c4610; position: relative; }
+.court-project-preview .eyebrow { color: #667a74; font-size: 12px; }
+.court-project-preview h4 { margin: 16px 0 26px; font-size: 28px; font-weight: 500; letter-spacing: -.04em; line-height: 1.2; }
+.court-project-preview > div { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 14px 0; border-top: 1px solid #e0e6e3; font-size: 15px; }
+.court-project-preview > div strong { color: #5a7269; font-weight: 500; white-space: nowrap; }
+.court-project-preview .court-project-meta { margin-top: 20px; font-size: 12px; color: #718079; }
+@media (max-width: 640px) { .court-project { margin-top: 32px; } .court-project-preview { padding: 25px; } .court-project .project-copy h3 { font-size: 38px; } .contact-form-note { font-size: 13px; } }

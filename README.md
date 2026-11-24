@@ -31,6 +31,9 @@
 | `assets/sergey-egorov.jpg` | Фотография на главном экране |
 | `assets/practice-desk.jpg` | Фотография в разделе о работе |
 | `calculator/index.html` | Проект «Время вместе» — калькулятор поколений |
+| `court-timezones.html` | Поиск суда и перевод времени заседания в московское |
+| `assets/courts-data.js` | 118 судов, города, пояса относительно Москвы и примечания из PDF |
+| `materials/arbitration-courts-timezones.pdf` | Исходный PDF-справочник для открытия и скачивания |
 | `CNAME` | Домен `esslaw.ru`; сохраняйте этот файл при обновлениях |
 | `.nojekyll` | Публикация готовых статических файлов без обработки Jekyll |
 
@@ -58,9 +61,17 @@
 <a href="materials/arbitration-court-timezones.pdf" download>Скачать PDF</a>
 ```
 
-После этого опубликуйте изменения тем же способом через **Commit to main → Push origin**. Сам раздел материалов пока не добавлен.
+После этого опубликуйте изменения тем же способом через **Commit to main → Push origin**. Первый материал уже добавлен в «Мои проекты»: справочник часовых поясов судов и его интерактивная версия.
 
 ## Справка GitHub
 
 - [Публикация GitHub Pages из ветки](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 - [Изменения и коммиты в GitHub Desktop](https://docs.github.com/en/desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project-in-github-desktop)
+
+## Форма для обращений
+
+Кнопки «Задать вопрос» ведут на https://forms.yandex.ru/u/6a030946902902001d717bc7/. Личная связь в Telegram сохранена в контактах. Уведомления на email настраиваются в самой Яндекс Форме: **Интеграции → Почта**, поле **Кому**. Настройки доставки письма не находятся в файлах сайта.
+
+## Как обновить справочник судов
+
+При обновлении PDF замените файл `materials/arbitration-courts-timezones.pdf`, затем обновите массив в `assets/courts-data.js`. Поле `moscowOffset` — разница с Москвой в часах, например `4` для Красноярска. `city` — город суда; `aliases` — дополнительные названия для поиска; `note` — важное примечание. После изменения количества судов обновите число в описаниях на главной странице и странице инструмента. Часовые пояса судов берутся из справочника и не предназначены для исторических расчётов ранее 2026 года.
